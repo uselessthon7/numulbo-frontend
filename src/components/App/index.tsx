@@ -8,6 +8,7 @@ import createBrowserHistory from 'history/createBrowserHistory';
 import { RootState } from 'store/reducer';
 
 import './styles.scss';
+import Container from './Container';
 
 interface Props {
     store: Store<RootState>;
@@ -22,7 +23,7 @@ export default class App extends React.Component<Props> {
         return (
             <Provider store={store}>
                 <Router history={history}>
-                    <Route path="/" component={() => <div>Hello world!</div>} />
+                    <Route path="/" component={() => <Container />} />
                 </Router>
             </Provider>
         );
